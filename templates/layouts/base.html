@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <title>{% block title %}Acme{% endblock %}</title>
+  </head>
+
+  <body>
+      {% include 'layouts/_nav.html' %}
+
+      {% block content %}{% endblock %}
+
+      {% include 'layouts/_footer.html' %}
+  </body>
+</html>
