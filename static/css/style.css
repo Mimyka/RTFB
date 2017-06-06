@@ -1,3 +1,56 @@
-body{
-  background-color: #DEDEDE
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+
+/*Component*/
+li{
+  list-style: none
+}
+
+section{
+  min-height: 600px
+}
+
+/*Navbar*/
+nav{
+  height: 50px;
+  background-color: #333;
+}
+
+nav a{
+  color: #1ce
+}
+
+nav .brand{
+  width: 25%;
+  padding-top: 20px
+}
+
+nav ul{
+  width: 80%;
+  float: right;
+}
+
+nav li{
+  display: inline-block;
+  padding: 20px 5px 0 0
+}
+
+/*Footer*/
+footer{
+  height: 200px;
+  text-align: center;
+  background-color: #333;
+  color: #fefefe
+}
+
+footer div{
+  height: calc(100% - 50px)
+}
+
+footer > p{
+  height: 50px
 }
