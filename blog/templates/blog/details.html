@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Blog | Article {{ post.id }}{% endblock %}
+
+{% block content %}
+<h1>#{{ post.id }} - {{ post.name}}</h1>
+<p>{{ post.resume }}</p>
+<p>{{ post.analytic }}</p>
+<a href="{% url 'blog:list' %}">Return to list</a>
+{% endblock %}
