@@ -1,3 +1,69 @@
-body{
-  background-color: #DEDEDE
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+
+/*Component*/
+a{
+  text-decoration: none
+}
+
+li{
+  list-style: none
+}
+
+section{
+  min-height: 600px
+}
+
+/*Navbar*/
+nav{
+  height: 50px;
+  background-color: #333;
+}
+
+nav::before{
+  content:" ";
+  width: 66%;
+  margin: auto;
+  display: block;
+  border-top: 5px solid #1ce
+}
+
+nav a{
+  color: #1ce
+}
+
+nav > a{
+  border: 1px solid red;
+  height: 100%;
+  padding: 10px 0 0 10px;
+  font-size: 26px
+}
+
+nav ul{
+  display: none
+}
+
+nav li{
+  display: inline-block;
+  padding: 20px 5px 0 0
+}
+
+/*Footer*/
+footer{
+  height: 200px;
+  text-align: center;
+  background-color: #333;
+  color: #fefefe
+}
+
+footer div{
+  height: calc(100% - 50px)
+}
+
+footer > p{
+  height: 50px
 }
