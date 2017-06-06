@@ -7,9 +7,6 @@ Révise ton f\*\*\*\*\*\* BAC
 
 Démarrage rapide
 ----------------
-----------
-
-
 
     git clone https://github.com/Mimyka/RTFB && cd RTFB/
     ./manage.py runserver
