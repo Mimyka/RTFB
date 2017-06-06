@@ -6,6 +6,10 @@
 
 
 /*Component*/
+a{
+  text-decoration: none
+}
+
 li{
   list-style: none
 }
@@ -20,18 +24,27 @@ nav{
   background-color: #333;
 }
 
+nav::before{
+  content:" ";
+  width: 66%;
+  margin: auto;
+  display: block;
+  border-top: 5px solid #1ce
+}
+
 nav a{
   color: #1ce
 }
 
-nav .brand{
-  width: 25%;
-  padding-top: 20px
+nav > a{
+  border: 1px solid red;
+  height: 100%;
+  padding: 10px 0 0 10px;
+  font-size: 26px
 }
 
 nav ul{
-  width: 80%;
-  float: right;
+  display: none
 }
 
 nav li{
