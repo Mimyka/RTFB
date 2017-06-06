@@ -23,8 +23,8 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name="index"),
-    url(r'^$', views.about, name="about"),
-    url(r'^$', views.contact, name="contact"),
+    url(r'^about/$', views.about, name="about"),
+    url(r'^contact/$', views.contact, name="contact"),
     url(r'^blog/', include('blog.urls')),
 ]
 
