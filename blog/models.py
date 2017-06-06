@@ -8,7 +8,7 @@ from django.db import models
 class Post(models.Model):
     title = models.CharField(max_length=255)
     resume = models.TextField()
-    text = models.TextField(none=True)
+    text = models.TextField()
     picture = models.ImageField(upload_to="upl")
 
     def __str__(self):
