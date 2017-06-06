@@ -7,9 +7,10 @@ from django.db import models
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    resume = models.TextField()
-    text = models.TextField()
+    author = models.ForeignKey('Author', on_delete=models.CASCADE)
     picture = models.ImageField(upload_to="upl")
+    headline = models.TextField()
+    analytic = models.TextField(blank=True)
 
     def __str__(self):
         return self.title
