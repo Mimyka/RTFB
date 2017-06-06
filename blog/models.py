@@ -17,7 +17,7 @@ class DescribeModel(models.Model):
 
 class Post(DescribeModel):
     Author = models.ForeignKey('Author', on_delete=models.CASCADE, null=True) #TODO: remove null=true and add a default author id:0 gh:1
-    picture = models.ImageField(upload_to="upl")
+    picture = models.ImageField()
     analytic = models.TextField(blank=True)
 
     def __str__(self):
