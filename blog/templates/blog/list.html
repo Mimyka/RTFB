@@ -10,7 +10,7 @@
 {% for post in posts %}
 <article>
   <h2><a href="{% url 'blog:details' post.id %}">{{ post.name }}</a></h2>
-  <img src="{% static post.picture %}" alt="">
+  <img src="{{ post.picture.url }}" alt="">
   <p>{{ post.Author.name }}</p>
   <p>{{ post.headline|truncatewords:11 }}</p>
   <p>{{ post.analytic|truncatewords:11 }}</p>
