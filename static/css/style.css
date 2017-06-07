@@ -14,8 +14,15 @@ li{
   list-style: none
 }
 
-section{
-  min-height: 600px
+button, .btn{
+  background-color: #C0D33Dr !important;
+  color: #800;
+  border: none !important;
+  transition: 0.25s all;
+}
+
+button:hover, .btn:hover{
+  border-radius: 0px !important;
 }
 
 .rtfb-logo{
