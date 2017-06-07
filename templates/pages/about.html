@@ -1,5 +1,52 @@
 {% extends 'layouts/base.html' %}
 
+{% load static %}
+
 {% block content %}
-  <h1>About</h1>
+  <section class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>A propos de...</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <div class="col-md-8 thumbnail">
+              <img class="img-responsive" src="{% static 'img/book.jpg' %}" alt="">
+            </div>
+
+            <div class="col-md-4">
+              <h2>... ce blog</h2>
+              <p>J'ai créé ce blog pour l'ensemble de élève de seconde et de terminal. Grâce à mon blog vous allez pouvoir vous faire plaisir pour votre oral ou écrit de Français ! A vous la réussites dans vos étude.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <h2>... moi</h2>
+              <p>Bonjour à toutes et à tous, je me présente je m'appele Soledad. Quand j'ai commencé ce blog j'étais en première en pleine révision de bac de français. Pour réviser j'ai fait des fiches de révision, comme tout le monde. Puis mon ami étant dans le web et ayant un montage de blog à réaliser pour son examen, je lui proposé ce que vous avez sous les yeux. Je souhaite que ce blog puisse vous inspirer et vous faire réussite dans l'ensemble de vos examen de français</p>
+            </div>
+
+            <div class="col-md-8">
+              <img class="img-responsive thumbnail" src="{% static 'img/book.jpg' %}" alt="">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <img class="img-responsive thumbnail" src="{% static 'img/book.jpg' %}" alt="">
+            </div>
+
+            <div class="col-md-4">
+              <h2>... de vous</h2>
+              <p>Parler du blog c'est bien, me présenter c'est super mais vous c'est le plus important ! C'est vous qui allez passer votre bac à la fin de l'année, et qu'est ce que ça va vite, donc c'est important que vous ayez les bons outils.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}
