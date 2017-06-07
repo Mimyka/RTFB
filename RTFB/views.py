@@ -7,7 +7,10 @@ from blog.models import Post
 # Create your views here.
 
 def index(request):
-    return render(request, 'pages/index.html', { 'posts': Post.objects.all(), 'recent': Post.objects.order_by('-id')[:3], 'mostPop': Post.objects.order_by('-id')[:1] })
+    return render(request, 'pages/index.html', {
+    'posts': Post.objects.filter(status__exact='p'),
+    'recent': Post.objects.filter(status__exact='p').order_by('-id')[:3],
+    })
 
 def about(request):
     return render(request, 'pages/about.html')

@@ -19,9 +19,9 @@
   <body>
       {% include 'layouts/_nav.html' %}
 
-      <div class="container-fluid">
+      <main role="main" class="container-fluid">
         {% block content %}{% endblock %}
-      </div>
+      </main>
 
       {% include 'layouts/_footer.html' %}
 
