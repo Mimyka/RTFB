@@ -41,4 +41,15 @@ Ce jour :
 
 Ce jour :
  * Réalisation des pages HTML (HTML/CSS) grâce au moteur de gabarit Django (équivalent à Twig sous Symfony),
- * Réalisation des dossiers *models* et création de la base de données et de ses tables.
+ * Réalisation des dossiers *models* et création de la base de données et de ses tables,
+ * Avancé sur la partie 'Admin',
+ * Création du Logo.
+
+ ------------
+
+### **Mercredi 07 juin 2017**
+
+Ce jour :
+ * Finalisation de la partie 'Admin',
+ * Finalisation de la vue HTML/CSS,
+ * Mise en production.
