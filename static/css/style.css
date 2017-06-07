@@ -188,7 +188,46 @@ footer{
  # #   ## #    # #       #  #
  # #    # #####  ###### #    #
 */
-#most-recent article > img{
-  height: 100px !important;
-  width: auto
+
+/*Body*/
+
+#mostRecent{
+  /*border: 1px solid red;*/
+  height: 550px
+}
+
+#mostRecent article{
+  margin-top: 40px
+}
+
+#mostRecent .img-thumbnail{
+  height: 200px;
+  width: 100%;
+  padding: 0;
+  overflow: hidden
+}
+
+#mostRecent .title-thumbnail{
+  height: 50px;
+}
+
+#mostRecent h3{
+  margin-top: 0
+}
+
+
+
+
+/*Aside*/
+aside{
+  /*border: 1px solid red;*/
+  background-color: #navy
+}
+
+/*Inscription*/
+
+#inscription{
+  height: 350px;
+  padding-top: 70px;
+  /*border: 1px solid red*/
 }
