@@ -18,37 +18,97 @@ section{
   min-height: 600px
 }
 
-/*Navbar*/
-nav{
-  height: 50px;
-  background-color: #333;
+.rtfb-logo{
+  font-weight: 700;
+  transform: scaleX(1.1);
 }
 
-nav::before{
-  content:" ";
-  width: 66%;
-  margin: auto;
+.rtfb-logo:hover span:before{
+  height: 100%
+}
+
+.rtfb-logo span{
+  position: relative;
+  padding: 4px 5px;
+}
+
+.rtfb-logo span:before{
+  overflow: hidden;
+  text-align: center;
+  transition: 1s all;
   display: block;
-  border-top: 5px solid #1ce
+  position: absolute;
+  transform: translate(0%, -15%);
+  left: 0;
+  height: 0%;
+  width: 100%;
+}
+
+.rtfb-logo span:first-child:before{
+  top: 0;
+  content: "RT";
+}
+
+.rtfb-logo span:last-child:before{
+  bottom: 0;
+  content: "FB";
+}
+
+.rtfb-logo span:first-child, .rtfb-logo span:last-child:before{
+  background-color: #800;
+  color: #c0d33d;
+}
+
+.rtfb-logo span:last-child, .rtfb-logo span:first-child:before{
+  background-color: #c0d33d;
+  color: #800;
+}
+
+/*body*/
+
+nav{
+  background-color: #c0d33d !important;
+  border-radius: 0px !important;
+  border: none !important;
+  /*border-bottom: 2px solid #800 !important;*/
 }
 
 nav a{
-  color: #1ce
+  color: #c00c00 !important;
+  font-weight: 700;
 }
 
-nav > a{
-  font-size: 26px
+nav .navbar-right input{
+  border-radius: 0px !important;
+  background-color: #EFF !important;
 }
 
-nav ul{
-  width: 75%;
-  float: right
-  /*display: none*/
+nav .navbar-right button{
+  margin-left: -10px !important;
+  border-radius: 0px !important;
+  color: #EFF !important;
+  border: 0 !important;
+  background-color: #c00c00 !important;
 }
 
-nav li{
-  display: inline-block;
-  padding: 20px 5px 0 0
+.home-header{
+  height: 400px;
+  background-image: url(../img/book.jpg);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-header .rtfb-logo{
+  font-size: 60px;
+}
+
+.home-header h5{
+  color: #c0d33d;
+  text-align: center;
+  font-size: 30px;
 }
 
 /*Footer*/
