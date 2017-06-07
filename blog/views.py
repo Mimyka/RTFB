@@ -30,4 +30,6 @@ def details(request, id):
     })
 
 def author(request, id):
-    return render(request, 'blog/author.html')
+    return render(request, 'blog/author.html', {
+    'author': get_object_or_404(Author,pk=id),
+    })
