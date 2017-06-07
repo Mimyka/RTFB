@@ -14,6 +14,10 @@ li{
   list-style: none
 }
 
+p{
+  text-align: justify
+}
+
 button, .btn{
   background-color: #C0D33D !important;
   color: #800;
@@ -186,6 +190,7 @@ footer{
 
 /*ACTUALITES*/
 #actuality{
+  margin
   padding: 10px 0
 }
 
@@ -210,35 +215,29 @@ footer{
 /*SECTION 1 : mostRecent*/
 
 #mostRecent{
-  /*border: 1px solid red;*/
-  height: 550px;
-  display: flex;
-  justify-content: space-around
+  min-height: 550px
 }
 
 #mostRecent article{
-  margin-top: 40px
+  margin-top: 40px;
 }
 
 #mostRecent .img-thumbnail{
-  height: 200px;
+  height: 300px;
   width: 100%;
   padding: 0;
   overflow: hidden
 }
 
-#mostRecent .title-thumbnail{
-  height: 50px;
-}
-
 #mostRecent h3{
+  height: 50px;
   margin-top: 0
 }
 
 /*SECTION 2 : mostPopular*/
 
 #mostPopular{
-  height: 550px;
+  min-height: 550px;
   margin-top: 100px
 }
 
@@ -253,46 +252,33 @@ footer{
   margin: auto
 }
 
-#mostPopular .carousel-caption{
-
-}
-
 #mostPopular > div:last-child{
   margin-top: 130px
 }
 
-#categories{
-  height: 500px;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  align-items: center;
+/*
+    #
+   # #   #####   ####  #    # #####
+  #   #  #    # #    # #    #   #
+ #     # #####  #    # #    #   #
+ ####### #    # #    # #    #   #
+ #     # #    # #    # #    #   #
+ #     # #####   ####   ####    #
+*/
+#about p{
+  line-height: 1.8
 }
 
-#categories > div{
-  height: 210px;
-  width: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-#categories > div:nth-of-type(1){
-  background-color: #F83
-}
-
-#categories > div:nth-of-type(4){
-  background-color: #C00C00
-}
-
-#categories > div:nth-of-type(2){
-  background-color: #48F
-}
-
-#categories > div:nth-of-type(3){
-  background-color: #8F9
-}
-
-#categories > div:first-child{
-  /*margin-left: 0*/
+/*
+  #####
+ #     #  ####  #    # #####   ##    ####  #####
+ #       #    # ##   #   #    #  #  #    #   #
+ #       #    # # #  #   #   #    # #        #
+ #       #    # #  # #   #   ###### #        #
+ #     # #    # #   ##   #   #    # #    #   #
+  #####   ####  #    #   #   #    #  ####    #
+*/
+#contact{
+  height: 200px
 }

@@ -7,59 +7,41 @@
 
 {% block content %}
 
-<article class="row">
-  <div class="col-xs-12">
+<article class="container-fluid">
     <div class="row">
-      <div class="col-sm-6 responsive">
-        <img src="{{ post.picture.url }}" alt="{{ post.name }}">
+      <div class="col-sm-4 responsive">
+        <img class="img-responsive" src="{{ post.picture.url }}" alt="{{ post.name }}">
       </div>
-
-      <div class="col-sm-6 ">
+      <div class="col-sm-8 ">
         <time datetime="{{ post.created_at|date:'d-m-Y' }}">{{ post.created_at|date:'d-M' }}</time>
 
-        <h3>{{ post.name }}</h3>
-
-        <p><b>de {{ post.Author.name }}</b></p>
+        <h2>{{ post.name }}</h2>
+        <p><a href="{% url 'blog:author' post.Author.id %}"><b>de {{ post.Author }}</b></a></p>
+        <p>{{ post.headline }}</p>
 
         <p><a href="{% url 'blog:list' %}">Retourner à la liste des livres</a></p>
       </div>
-    </div>
-
-    <div class="row">
       <div class="col-xs-12">
-        <h3>Biographie de l'auteur</h3>
+        <h3>Présentation de {{ post.Author.name }}</h3>
         <p>{{ post.Author.headline }}</p>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-12">
-        <h3>Résumé du livre</h3>
-        <p>{{ post.headline }}</p>
-      </div>
-    </div>
-
-    <div class="row">
+    {% for analytic in analytics %}
+    <div class="row container-fluid">
       <div class="col-sm-12">
-        <ul>
-          <li>Analyse 1</li>
-          <li>Analyse 2</li>
-          <li>Analyse 3</li>
-        </ul>
+        <h2 id="{{analytic.id}}">{{ post.name }} - {{ analytic.part }}</h2>
+      </div>
+      <div class="col-md-5">
+        <h3>Texte original</h3>
+        <p>{{analytic.extract}}</p>
       </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <h3>Texte original</h3>
-          <p>Texte original de l'analyse</p>
-        </div>
-
-        <div class="col-md-6">
-          <h3>Texte analytique</h3>
-          <p>{{ post.analytic }}</p>
-        </div>
+      <div class="col-md-7">
+        <h3>Texte analytique</h3>
+        <p>{{ analytic.content }}</p>
       </div>
     </div>
-  </div>
+    {% endfor %}
 </article>
 {% endblock %}

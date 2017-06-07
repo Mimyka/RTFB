@@ -108,8 +108,10 @@ class Analytic(TimestampModel, DraftModel, UserModel):
 # Author.name
 # Author.headline
 # Author.User
+# Author.picture
 
 class Author(DescribeModel, UserModel):
+    picture = models.ImageField()
 
     def __unicode__(self):
         return self.name

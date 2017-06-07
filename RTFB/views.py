@@ -9,7 +9,7 @@ from blog.models import Post
 def index(request):
     return render(request, 'pages/index.html', {
     'posts': Post.objects.filter(status__exact='p'),
-    'recent': Post.objects.filter(status__exact='p').order_by('-id')[:3],
+    'recent': Post.objects.filter(status__exact='p').order_by('-id')[:4],
     })
 
 def about(request):
@@ -17,3 +17,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'pages/contact.html')
+
+def login(request):
+    return render(request, 'pages/login.html')
