@@ -32,7 +32,7 @@ class DescribeModel(TimestampModel):
 class Post(DescribeModel):
     Author = models.ForeignKey('Author', on_delete=models.CASCADE, default=1)
     picture = models.ImageField()
-    analytic = models.TextField(blank=True)
+    date = models.DecimalField(decimal_places=0,max_digits=4, blank=True)
     User = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
 
     def __unicode__(self):
@@ -40,6 +40,19 @@ class Post(DescribeModel):
 
     def __str__(self):
         return self.name
+
+class Analytic(TimestampModel):
+    Post = models.ForeignKey('Post', default=1)
+    part_concerned = models.CharField(max_length=255)
+    content = models.TextField()
+    extract = models.TextField()
+
+    def __unicode__(self):
+        return self.Post.name + " - " + self.part_concerned
+
+    def __str__(self):
+        return self.Post.name + " - " + self.part_concerned
+
 
 class Author(DescribeModel):
 

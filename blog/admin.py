@@ -40,4 +40,5 @@ class CommentModelAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Post, PostModelAdmin)
 admin.site.register(models.Author, AuthorModelAdmin)
-admin.site.register(models.Comment)
+admin.site.register(models.Analytic)
+admin.site.register(models.Comment, CommentModelAdmin)
