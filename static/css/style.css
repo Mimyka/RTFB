@@ -79,8 +79,14 @@ nav a{
 }
 
 nav .navbar-right input{
-  border-radius: 0px !important;
-  background-color: #EFF !important;
+  border-radius: 0px;
+  background-color: #EFF;
+  vertical-align: middle;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border: 1px solid #ccc;
+  box-shadow: inset 1px 1px 10px rgba(0,0,0,.1);
 }
 
 nav .navbar-right button{
@@ -109,6 +115,7 @@ nav .navbar-right button{
   color: #c0d33d;
   text-align: center;
   font-size: 30px;
+  text-shadow: 1px 3px 2px black;
 }
 
 /*Footer*/
