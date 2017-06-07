@@ -323,6 +323,10 @@ footer{
   height: 400px
 }
 
-.login form{
-  margin: 50px
+.login > div:first-child{
+  margin-top: 85px
+}
+
+.login > div:last-child{
+  margin-top: 50px
 }
