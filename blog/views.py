@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Analytic
+from .models import Post, Analytic, Author
 from django.db.models import Q
 
 # Create your views here.
@@ -27,4 +27,10 @@ def details(request, id):
     Q(status__exact='p') &
     Q(Post__id__exact=id)
     ),
+    })
+
+def author(request, id):
+    return render(request, 'blog/author.html', {
+    'author': get_object_or_404(Author,pk=id),
+    'posts': Post.objects.filter(Author__id=id)
     })

@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'blog/css/style.css' %}">{% endblock %}
+{% block title %}Auteur | {{ author.name }} {% endblock %}
+
+{% block content %}
+  <article class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="{{ author.picture.url }}" alt="{{ author.name }}">
+      </div>
+
+      <div class="col-sm-8">
+          <h1>{{ author.name }}</h1>
+          <p>{{ author.headline }}</p>
+      </div>
+    </div>
+  </article>
+{% endblock %}

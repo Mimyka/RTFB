@@ -211,34 +211,28 @@ footer{
 /*SECTION 1 : mostRecent*/
 
 #mostRecent{
-  /*border: 1px solid red;*/
-  height: 550px;
-  display: flex;
-  justify-content: space-around
+  height: 550px
 }
 
 #mostRecent article{
-  margin-top: 40px
+  margin-top: 40px;
+  background-color: #CDCECF
 }
 
 #mostRecent .img-thumbnail{
-  height: 200px;
+  height: 300px;
   width: 100%;
   padding: 0;
   overflow: hidden
 }
 
-#mostRecent .title-thumbnail{
-  height: 50px;
-}
-/*
-#mostRecent .caption p:first-child{
-  border: 1px solid red;
-  background-color: red
-}*/
-
 #mostRecent h3{
-  margin-top: 0
+  margin-top: 0;
+  color: #FEFEFE
+}
+
+#mostRecent .btn{
+  float: right
 }
 
 /*SECTION 2 : mostPopular*/
@@ -268,19 +262,12 @@ footer{
 }
 
 #categories{
-  height: 500px;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  align-items: center;
+  /*height: 500px*/
 }
 
 #categories > div{
   height: 210px;
   width: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   border-radius: 5px
 }
@@ -306,9 +293,20 @@ footer{
   background-color: #8F9
 }
 
-#categories > div:first-child{
-  /*margin-left: 0*/
+/*
+    #
+   # #   #####   ####  #    # #####
+  #   #  #    # #    # #    #   #
+ #     # #####  #    # #    #   #
+ ####### #    # #    # #    #   #
+ #     # #    # #    # #    #   #
+ #     # #####   ####   ####    #
+*/
+#about p{
+  text-align: justify;
+  line-height: 1.8
 }
+
 
 /*
  #       #######  #####  ### #     #
