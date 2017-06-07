@@ -34,19 +34,9 @@
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
-                {% for post in mostPop %}
-                <div class="item active">
-                  <img src="{{ post.picture.url }}" alt="...">
-                  <div class="carousel-caption">
-                    <h3>{{ post.name }}</h3>
-                    <p>de {{ post.Author }}</p>
-                  </div>
-                </div>
-                {% endfor %}
-
                 {% for post in recent %}
-                <div class="item">
-                  <img src="{{ post.picture.url }}" alt="...">
+                <div class="item {% if forloop.first %}active{% endif %}">
+                  <img src="{{ post.picture.url }}" alt="{{ post.name }}">
                   <div class="carousel-caption">
                     <h3>{{ post.name }}</h3>
                     <p>de {{ post.Author }}</p>
