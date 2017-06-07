@@ -4,11 +4,16 @@ article{
   float: left;
 }
 
-article img{
-  height: auto;
-  width: 250px;
-  display: block;
-  margin: auto;
+#list .img-thumbnail{
+  height: 300px;
+  width: 100%;
+  padding: 0;
+  overflow: hidden
+}
+
+#list h3{
+  height: 50px;
+  margin-top: 0
 }
 
 /*Helper*/
