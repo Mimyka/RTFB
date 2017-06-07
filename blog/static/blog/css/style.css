@@ -1,0 +1,25 @@
+article{
+  border: 1px solid #DDD;
+  padding: 10px;
+  float: left;
+}
+
+article img{
+  height: auto;
+  width: 250px;
+  display: block;
+  margin: auto;
+}
+
+/*Helper*/
+
+.container{
+  padding: 0 15px;
+  margin: auto;
+}
+
+.container::before{
+  content: " ";
+  display: table;
+  clear: both;
+}
