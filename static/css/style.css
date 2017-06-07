@@ -309,3 +309,20 @@ footer{
 #categories > div:first-child{
   /*margin-left: 0*/
 }
+
+/*
+ #       #######  #####  ### #     #
+ #       #     # #     #  #  ##    #
+ #       #     # #        #  # #   #
+ #       #     # #  ####  #  #  #  #
+ #       #     # #     #  #  #   # #
+ #       #     # #     #  #  #    ##
+ ####### #######  #####  ### #     #
+*/
+.login{
+  height: 400px
+}
+
+.login form{
+  margin: 50px
+}
