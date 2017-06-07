@@ -23,7 +23,7 @@ def list(request):
 def details(request, id):
     return render(request, 'blog/details.html', {
     'post': get_object_or_404(Post.objects.filter(status__exact='p'),pk=id),
-    'analytic': Analytic.objects.filter(
+    'analytics': Analytic.objects.filter(
     Q(status__exact='p') &
     Q(Post__id__exact=id)
     ),
