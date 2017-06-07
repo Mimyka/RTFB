@@ -32,4 +32,5 @@ def details(request, id):
 def author(request, id):
     return render(request, 'blog/author.html', {
     'author': get_object_or_404(Author,pk=id),
+    'posts': Post.objects.filter(Author__id=id)
     })
