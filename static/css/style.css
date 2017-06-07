@@ -64,12 +64,21 @@ section{
   color: #800;
 }
 
+.fixed{
+  position: fixed !important;
+}
+
 /*body*/
 
 nav{
   background-color: #c0d33d !important;
   border-radius: 0px !important;
   border: none !important;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  position: relative;
+  z-index: 100;
 }
 
 nav:after{
