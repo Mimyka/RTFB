@@ -30,7 +30,7 @@ class DescribeModel(TimestampModel):
 # Models
 
 class Post(DescribeModel):
-    Author = models.ForeignKey('Author', on_delete=models.CASCADE, null=True) #TODO: remove null=true and add a default author id:0 gh:1
+    Author = models.ForeignKey('Author', on_delete=models.CASCADE, default=1)
     picture = models.ImageField()
     analytic = models.TextField(blank=True)
     User = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
