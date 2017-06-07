@@ -24,6 +24,10 @@
     {
       "name": "TODO",
       "hidden": false
+    },
+    {
+      "name": "DONE",
+      "hidden": false
     }
   ],
   "marked": {
@@ -38,5 +42,12 @@
     "id": "5936755e8409e028371f3991",
     "name": "RTFB",
     "useImdoneioForPriority": true
+  },
+  "meta": {
+    "gh": {
+      "urlTemplate": "https://github.com/Mimyka/RTFB/issues/%s",
+      "titleTemplate": "View github issue %s",
+      "icon": "icon-octoface"
+    }
   }
 }

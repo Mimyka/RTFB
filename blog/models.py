@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
+from django.db import models
 
 # Create your models here.
 
@@ -19,14 +20,17 @@ class TimestampModel(models.Model):
 class DescribeModel(TimestampModel):
     name = models.CharField(max_length=100)
     headline = models.TextField()
-
+    status = models.CharField(max_length=1, choices=(
+        ('d', 'Draft'),
+        ('p', 'Published'),
+    ))
     class Meta:
         abstract = True
 
 # Models
 
 class Post(DescribeModel):
-    Author = models.ForeignKey('Author', on_delete=models.CASCADE, null=True) #TODO: remove null=true and add a default author id:0 gh:1
+    Author = models.ForeignKey('Author', on_delete=models.CASCADE, default=1)
     picture = models.ImageField()
     analytic = models.TextField(blank=True)
     User = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)

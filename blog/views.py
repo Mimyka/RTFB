@@ -8,12 +8,13 @@ from django.db.models import Q
 # Create your views here.
 
 def list(request):
-    queryset_list = Post.objects.all()
+    queryset_list = Post.objects.filter(status__exact='p')
     query = request.GET.get("q")
     if query:
         queryset_list = queryset_list.filter(
         Q(name__icontains=query) |
-        Q(Author__name__icontains=query)
+        Q(Author__name__icontains=query) &
+        Q(status__exact='p')
         )
     return render(request, 'blog/list.html', {
     'posts': queryset_list,
@@ -21,5 +22,5 @@ def list(request):
 
 def details(request, id):
     return render(request, 'blog/details.html', {
-    'post': get_object_or_404(Post,pk=id),
+    'post': get_object_or_404(Post.objects.filter(status__exact='p'),pk=id),
     })

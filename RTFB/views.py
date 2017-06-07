@@ -8,8 +8,8 @@ from blog.models import Post
 
 def index(request):
     return render(request, 'pages/index.html', {
-    'posts': Post.objects.all(),
-    'recent': Post.objects.order_by('-id')[:3],
+    'posts': Post.objects.filter(status__exact='p'),
+    'recent': Post.objects.filter(status__exact='p').order_by('-id')[:3],
     })
 
 def about(request):
